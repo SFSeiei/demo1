@@ -1,0 +1,135 @@
+{% extends "base.html" %}
+
+{% block cssArea%}
+
+    <link rel="shortcut icon" href="../static/assets/ico/favicon.html">
+    <link href="../static/assets/css/bootstrap.css" rel="stylesheet">
+    <link href="../static/assets/css/theme.css" rel="stylesheet">
+    <link href="../static/assets/css/font-awesome.min.css" rel="stylesheet">
+    <link href="../static/assets/css/alertify.css" rel="stylesheet">
+
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link href="../static/assets/css/facybox.css" rel="stylesheet">
+
+{%endblock%}
+{% block leftNav%}
+    <div class="accordion" id="accordion2">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                <a class="accordion-toggle b_F6F1A2" href="http://127.0.0.1:5000/workDetail/0"><i class="icon-table"></i> <span>AI顔認識結果確認</span></a>
+            </div>
+        </div>
+
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                <a class="accordion-toggle b_F6F1A2" href="http://127.0.0.1:5000/faceRecognitionPage"><i class="icon-tasks"></i> <span>AI顔認識実行</span></a>
+            </div>
+        </div>
+
+
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                <a class="accordion-toggle b_F6F1A2 active" href="http://127.0.0.1:5000/talentMasterSearch"><i class="icon-picture"></i> <span>タレント・マスタ検索</span></a>
+            </div>
+        </div>
+
+    </div>
+{% endblock %}
+
+
+{% block mainContentArea%}
+      <!-- Main window -->
+        <div class="main_container" id="tables_page">
+            <div class="row-fluid row-fluid_2">
+            </div>
+            <div class="row-fluid row-fluid_2">
+                <div class="widget widget-padding span12">
+                    <div class="widget-header" style="height: 30px;min-height: 10px;">
+                      <i class="icon-group" style="padding: 5px 10px 15px 11px;"></i>
+                      <h5 style="padding: 5px 10px 15px 11px;">検索エリア</h5>
+                        <div class="widget-buttons">
+
+                        </div>
+                    </div>
+                    <div class="widget-body">
+                          タレントコード：<input type="text" class="span1" placeholder="" value="">&nbsp;&nbsp;&nbsp;
+                          タレント名：<input type="text" class="span1" placeholder="" value="">&nbsp;&nbsp;&nbsp;
+                          タレント名（読み）：<input type="text" class="span1" placeholder="" value="">&nbsp;&nbsp;&nbsp;
+
+                          VR：<input type="text" class="span1" placeholder="" value="">&nbsp;&nbsp;&nbsp;
+
+                          グループ名：<select tabindex="1" data-placeholder="" class="span1">
+                                      <option value=""></option>
+                                      <option value="Category 1">HKT48</option>
+                                      <option value="Category 2">AKB48</option>
+                                   </select>&nbsp;&nbsp;&nbsp;
+
+                          性別：<select tabindex="1" data-placeholder="" class="span1">
+                                  <option value=""></option>
+                                  <option value="Category 1">男</option>
+                                  <option value="Category 2">女</option>
+                               </select>&nbsp;&nbsp;&nbsp;
+
+                           誕生日：<input type="text" class="layui-input" id="test13" placeholder="yyyyMMdd">
+                        &nbsp;&nbsp;&nbsp;<button type="submit" class="btn btn-primary" style="margin-bottom: 10px;" id="search">検索</button>
+                            </div>
+                </div>
+			</div><br>
+
+          <div class="row-fluid row-fluid_2">
+            <div class="widget widget-padding span12">
+              <div class="widget-header" style="height: 30px;min-height: 10px;">
+              <i class="icon-table" style="padding: 5px 10px 15px 11px;"></i>
+                <h5 style="padding: 5px 10px 15px 11px;">タレントマスタ検索结果一覧</h5>
+              </div>
+              <div class="widget-body">
+                <div class="row-fluid">
+                  <div class="span12">
+                    <table class="table table-bordered">
+                      <thead>
+                        <tr>
+                            <th>タレントコード</th>
+                            <th>タレントコード（VR）</th>
+                            <th>タレント名</th>
+                            <th>タレント名（読み）</th>
+                            <th>性別</th>
+                            <th>誕生日</th>
+                            <th>オフィス名</th>
+                            <th>ジャンル</th>
+                            <th>備考</th>
+                            <th></th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>1</td>
+                          <td>APNA</td>
+                          <td>指原　莉乃</td>
+                          <td>ｻｼﾊﾗ ﾘﾉ</td>
+                          <td>女</td>
+                          <td>19921121</td>
+                          <td>太田プロダクション</td>
+                          <td>アイドル、アイドルプロデューサー</td>
+                          <td>HKT48のメンバー</td>
+                          <td><a class="btn btn-small" href="http://127.0.0.1:5000/imageOperation"><i class="icon-edit"></i>詳細情報</a></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div><!--/widget-body-->
+            </div> <!-- /widget -->
+          </div> <!-- /row-fluid -->
+		</div>
+{%endblock%}
+
+{% block jsArea%}
+    <script type="text/javascript" src="../static/assets/js/jquery.min.js"></script>
+    <script type="text/javascript" src="../static/assets/js/jquery-ui.min.js"></script>
+    <script src="../static/layui/layui.js" charset="utf-8"></script>
+    <script src="../static/js/talentMasterSearch.js" charset="utf-8"></script>
+{%endblock%}
+

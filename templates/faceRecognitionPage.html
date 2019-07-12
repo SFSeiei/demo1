@@ -1,0 +1,114 @@
+{% extends "base.html" %}
+
+
+{% block leftNav%}
+    <div class="accordion" id="accordion2">
+            <div class="accordion-group">
+                <div class="accordion-heading">
+                    <a class="accordion-toggle b_F6F1A2" href="http://127.0.0.1:5000/workDetail/0"><i class="icon-table"></i> <span>AI顔認識結果確認</span></a>
+                </div>
+            </div>
+
+            <div class="accordion-group">
+                <div class="accordion-heading">
+                    <a class="accordion-toggle b_F6F1A2 active" href="http://127.0.0.1:5000/faceRecognitionPage"><i class="icon-tasks"></i> <span>AI顔認識実行</span></a>
+                </div>
+            </div>
+
+
+            <div class="accordion-group">
+                <div class="accordion-heading">
+                    <a class="accordion-toggle b_F6F1A2" href="http://127.0.0.1:5000/talentMasterSearch"><i class="icon-picture"></i> <span>タレント・マスタ検索</span></a>
+                </div>
+            </div>
+
+        </div>
+{% endblock %}
+
+{% block mainContentArea%}
+      <div class="main_container" id="forms_page">
+        <div class="row-fluid">
+        </div>
+
+          <div class="row-fluid">
+          <div class="widget widget-padding span12">
+            <div class="widget-header" style="height: 30px;min-height: 10px;">
+              <i class="icon-table" style="padding: 5px 10px 15px 11px;"></i><h5 style="padding: 5px 10px 15px 11px;">AI顔認識実行</h5></div>
+            <div class="widget-body" style="height: 180px;">
+              <div class="widget-forms clearfix">
+                  <br>
+                <form class="form-inline">
+                  <input type="text" class="span6" placeholder="Select Folder" id="chooseFolder">
+                  <input type="file" webkitdirectory name="uploadDir" id="b" style="display: none"/>
+                  <button type="button" class="btn btn-primary" onclick='location.href=("http://127.0.0.1:5000/faceRecognition")'>顔認識実行</button>
+
+                    <div class="control-group">
+                        <br>
+                        <br>
+                        <label class="control-label">プロセス</label>
+                        <div class="controls">
+                          <div class="progress progress-striped active">
+                            <div class="bar" style="width: 1%;"></div>
+                          </div>
+                        </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      {% if result %}
+        <div class="row-fluid row-fluid_2" id="result">
+            <div class="widget widget-padding span12">
+              <div class="widget-header" style="height: 30px;min-height: 10px;">
+              <i class="icon-table" style="padding: 5px 10px 15px 11px;"></i>
+                <h5 style="padding: 5px 10px 15px 11px;">AI顔認識実行結果</h5>
+              </div>
+              <div class="widget-body">
+                <div class="row-fluid">
+                  <div class="span12">
+                    <table class="table table-bordered">
+                      <thead>
+                        <tr>
+                            <th>素材ファイル数</th>
+                            <th>抽出顔数</th>
+                            <th>認識したタレント</th>
+                            <th>未認識タレント</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>{{ result.fileCounts }}</td>
+                          <td>{{ result.faceCounts }}</td>
+                          <td>{{ result.recognitionCounts }}</td>
+                          <td>{{ result.unrecognitionCounts }}</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div><!--/widget-body-->
+              <div class="widget-footer">
+                   <button class="btn btn-success" id="resultShow" onclick='location.href=("http://127.0.0.1:5000/workDetail/0")'>AI顔認識結果へ</button>
+            </div>
+            </div> <!-- /widget -->
+          </div> <!-- /row-fluid -->
+        {% endif %}
+
+      </div>
+
+
+      <!-- /Main window -->
+{%endblock%}
+
+
+{% block jsArea%}
+    <script type="text/javascript" src="../static/assets/js/jquery.min.js"></script>
+    <script type="text/javascript" src="../static/assets/js/jquery-ui.min.js"></script>\
+    <script type="text/javascript" src="../static/assets/js/bootstrap.js"></script>
+    <script type="text/javascript" src="../static/assets/js/select2.min.js"></script>
+    <script type="text/javascript" src="../static/js/faceRecognitionPage.js"></script>
+
+
+{%endblock%}

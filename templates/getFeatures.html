@@ -1,0 +1,99 @@
+{% extends "base.html" %}
+
+{% block leftNav%}
+    <div class="accordion" id="accordion2">
+            <div class="accordion-group">
+                <div class="accordion-heading">
+                    <a class="accordion-toggle b_F6F1A2" href="http://127.0.0.1:5000/workDetail/0"><i class="icon-table"></i> <span>工作区</span></a>
+                </div>
+            </div>
+
+            <div class="accordion-group">
+                <div class="accordion-heading">
+                    <a class="accordion-toggle b_F6F1A2" href="http://127.0.0.1:5000/faceRecognition"><i class="icon-tasks"></i> <span>人脸识别</span></a>
+                </div>
+            </div>
+
+
+            <div class="accordion-group">
+                <div class="accordion-heading">
+                    <a class="accordion-toggle b_F6F1A2" href="http://127.0.0.1:5000/imageOperation"><i class="icon-picture"></i> <span>数据库更新</span></a>
+                </div>
+            </div>
+
+            <div class="accordion-group">
+                <div class="accordion-heading">
+                    <a class="accordion-toggle b_F6F1A2 active" href="http://127.0.0.1:5000/getFeatures"><i class="icon-tasks"></i> <span>特征抽出</span></a>
+                </div>
+            </div>
+        </div>
+{% endblock %}
+
+{% block mainContentArea%}
+      <!-- Main window -->
+      <div class="main_container" id="forms_page">
+        <div class="row-fluid">
+        </div>
+
+        <div class="row-fluid">
+          <div class="widget widget-padding span12">
+            <div class="widget-header"><i class="icon-list-alt"></i><h5>Face Features Picker</h5></div>
+            <div class="widget-body" style="height: 250px;">
+              <div class="widget-forms clearfix">
+                  <br>
+                <form class="form-inline">
+                  <input type="text" class="span6" placeholder="Select Folder">
+{#                  <input type="password" class="span4" placeholder="Password">#}
+                  <button type="submit" class="btn btn-success">Get Features</button>
+
+                    <div class="control-group">
+                        <br>
+                        <br>
+                        <label class="control-label">Process Bar</label>
+                        <div class="controls">
+                          <div class="progress progress-striped active">
+
+                            <div class="bar" style="width: 60%;"></div>
+                          </div>
+                        </div>
+                  </div>
+
+                </form>
+              </div>
+            </div>
+          </div>
+
+
+        <div class="row-fluid">
+          
+          </div>
+        </div>
+      </div>
+      <!-- /Main window -->
+ {%endblock%}
+
+
+{% block jsArea%}
+    <script type="text/javascript" src="../static/assets/js/jquery.min.js"></script>
+    <script type="text/javascript" src="../static/assets/js/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="../static/assets/js/raphael-min.js"></script>
+    <script type="text/javascript" src="../static/assets/js/bootstrap.js"></script>
+    <script type="text/javascript" src='../static/assets/js/sparkline.js'></script>
+    <script type="text/javascript" src='../static/assets/js/morris.min.js'></script>
+    <script type="text/javascript" src="../static/assets/js/jquery.dataTables.min.js"></script>
+    <script type="text/javascript" src="../static/assets/js/jquery.masonry.min.js"></script>
+    <script type="text/javascript" src="../static/assets/js/jquery.imagesloaded.min.js"></script>
+    <script type="text/javascript" src="../static/assets/js/jquery.facybox.js"></script>
+    <script type="text/javascript" src="../static/assets/js/jquery.alertify.min.js"></script>
+    <script type="text/javascript" src="../static/assets/js/jquery.knob.js"></script>
+    <script type='text/javascript' src='../static/assets/js/fullcalendar.min.js'></script>
+    <script type='text/javascript' src='../static/assets/js/jquery.gritter.min.js'></script>
+    <script type="text/javascript" src="../static/assets/js/realm.js"></script>
+
+    <script type="text/javascript" src="../static/assets/js/select2.min.js"></script>
+    <script type="text/javascript" src="../static/assets/js/bootstrap-colorpicker.js"></script>
+    <script type="text/javascript" src="../static/assets/js/bootstrap-datepicker.js"></script>
+    <script type="text/javascript" src="../static/assets/js/bootstrap-timepicker.js"></script>
+    <script type="text/javascript" src="../static/assets/js/fileinput.min.js"></script>
+    <script type="text/javascript" src="../static/assets/js/fileinput.js"></script>
+{%endblock%}

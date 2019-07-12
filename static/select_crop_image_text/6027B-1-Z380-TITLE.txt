@@ -1,0 +1,4 @@
+TITLE
+6027シリーズ ピンヘッダー
+SERIES 6027 PIN HEADER
+|

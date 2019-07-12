@@ -1,0 +1,213 @@
+{% extends "base.html" %}
+
+
+{% block leftNav%}
+    <div class="accordion" id="accordion2">
+            <div class="accordion-group">
+                <div class="accordion-heading">
+                    <a class="accordion-toggle b_F6F1A2 active" href="http://127.0.0.1:5000/workDetail/0"><i class="icon-table"></i> <span>AI顔認識結果確認</span></a>
+                </div>
+            </div>
+
+           <div class="accordion-group">
+                <div class="accordion-heading">
+                    <a class="accordion-toggle b_F6F1A2" href="http://127.0.0.1:5000/faceRecognitionPage"><i class="icon-tasks"></i> <span>AI顔認識実行</span></a>
+                </div>
+            </div>
+
+
+            <div class="accordion-group">
+                <div class="accordion-heading">
+                    <a class="accordion-toggle b_F6F1A2" href="http://127.0.0.1:5000/imageOperation"><i class="icon-picture"></i> <span>タレント・マスタ検索</span></a>
+                </div>
+            </div>
+
+        </div>
+{% endblock %}
+
+
+
+
+
+{% block mainContentArea%}
+      <!-- Main window -->
+      <div class="main_container" id="forms_page">
+      <br>
+
+         {% for i in range(1) %}
+
+            <div class="row-fluid">
+              <div class="widget widget-padding span12">
+                <div class="widget-header">
+                  <i class="icon-list-alt"></i><h5>タレント素材情報編集</h5>
+                  <div class="widget-buttons">
+                      <a href="#" data-title="Collapse" data-collapsed="false" class="tip collapse"><i class="icon-chevron-up"></i></a>
+                  </div>
+                </div>
+                <div class="widget-body">
+                  <div class="widget-forms clearfix">
+                    <form class="form-horizontal">
+                        <div class="control-group">
+                            <label class="control-label">素材コード：</label>
+                            <div class="controls">
+                              <label style="margin-top: 5px">ABCD001</label>
+                            </div>
+                      </div>
+
+                      <div style="margin-left: 360px;">
+
+
+                          <span>広告顔</span>
+                          <span style="margin-left: 60px;">白石　麻衣</span>
+                          <span style="margin-left: 50px;">綾瀬　はるか</span>
+                          <span style="margin-left: 40px;">有村　架純</span>
+                          <span style="margin-left: 55px;">土屋　太鳳</span>
+                          <span style="margin-left: 45px;">清野　菜名</span>
+                      </div>
+
+                      <div>
+                        <label class="control-label" style="margin-top: 60px">素材画像：</label>
+                        <div class="control-group">
+                            <div class="controls" style="height: 120px;">
+                              <img src="../static/assets/img/timg1.jpg" class="span1" style="max-height: 120px;">
+
+                              <img src="../static/assets/img/jt.png" class="tip span1" style="max-height: 50px; max-width: 50px; margin-left: 10px;margin-top: 40px;">
+
+                              <img src="../static/assets/img/timg1_0.jpg" style="border: 4px solid deepskyblue;max-height: 120px;margin-left: 10px !important;" data-title="" class="tip span1" style="">
+
+                              <img src="../static/assets/img/AQKE_0001_y_0.jpg" style="border: 4px solid green" data-title="第一候選 ：白石　麻衣" class="tip span1" style="max-height: 120px;">
+
+                              <img src="../static/assets/img/ACYP_0003_b_0.jpg" data-title="第二候選" class="tip span1" style="max-height: 120px;">
+
+                              <img src="../static/assets/img/AP31_0003_y_0.jpg" data-title="第三候選" class="tip span1"  style="max-height: 120px;">
+
+                              <img src="../static/assets/img/ALQY_0001_b_0.jpg" data-title="第四候選" class="tip span1"  style="max-height: 120px;">
+
+                              <img src="../static/assets/img/AMUJ_00010_b_0.jpg" data-title="第五候選" class="tip span1"  style="max-height: 120px;">
+
+                            </div>
+                        </div>
+                      </div>
+
+                      <div class="control-group">
+                        <label class="control-label">タレントコード（VR）：</label>
+                        <div class="controls">
+                          <input class="span2 tip" data-title="" type="text" placeholder="" value="APNA" >
+                        </div>
+                      </div>
+                      <div class="control-group">
+                          <label class="control-label">タレント名：</label>
+                          <div class="controls">
+                              <input class="span2 tip" data-title="" type="text" placeholder="" value="指原　莉乃" >
+                          </div>
+                      </div>
+                        <div class="control-group">
+                            <label class="control-label">タレント名（読み）：</label>
+                            <div class="controls">
+                                <input class="span2 tip" data-title="" type="text" placeholder="" value="ｻｼﾊﾗ ﾘﾉ" >
+                            </div>
+                        </div>
+
+                      <div class="control-group">
+                        <label class="control-label">性別：</label>
+                          <div class="controls">
+                            <select tabindex="1" data-placeholder="Select here.." class="span2" >
+                               <option value=""></option>
+                               <option value="Category 1" >男</option>
+                               <option value="Category 2" selected>女</option>
+                            </select>
+                         </div>
+                      </div>
+
+                      <div class="control-group">
+                        <label class="control-label">誕生日：</label>
+                          <div class="controls">
+                              <input type="text" class="layui-input span2" id="test13" placeholder="yyyyMMdd" value="20000503">
+                          </div>
+                      </div>
+
+                       <div class="control-group">
+                            <label class="control-label">グループ名：</label>
+                            <div class="controls">
+                                <select tabindex="1" data-placeholder="Select here.." style="width: 10.4%" >
+                                   <option value=""></option>
+                                   <option value="Category 1" >HKT48</option>
+                                   <option value="Category 2" selected>AKB48</option>
+                                </select>
+                                <select tabindex="1" data-placeholder="Select here.." style="width: 10.4%" >
+                                   <option value=""></option>
+                                   <option value="Category 1" >HKT48</option>
+                                   <option value="Category 2" selected>AKB48</option>
+                                </select>
+                                <select tabindex="1" data-placeholder="Select here.." style="width: 10.4%" >
+                                   <option value=""></option>
+                                   <option value="Category 1" >HKT48</option>
+                                   <option value="Category 2" selected>AKB48</option>
+                                </select>
+                                <a href="#" class="tip" data-title="グループ追加" data-toggle="modal" data-target="#example_modal"><i class="icon-plus"  style="margin-top: 8px; margin-left: 10px;" id="addGroup"></i></a>
+                            </div>
+                        </div>
+
+                      <div class="control-group">
+                        <label class="control-label">オフィス名：</label>
+                        <div class="controls">
+                          <input class="span4 tip" data-title="" type="text" placeholder="" value="太田プロダクション" >
+
+                        </div>
+                      </div>
+
+                      <div class="control-group">
+                        <label class="control-label">ジャンル：</label>
+                        <div class="controls">
+                          <input class="span4 tip" data-title="" type="text" placeholder="" value="アイドル、アイドルプロデューサー" >
+
+                        </div>
+                      </div>
+
+
+                      <div class="control-group">
+                        <label class="control-label">備考：</label>
+                          <div class="controls">
+                            <textarea class="span4" rows="10" style="height:50px;" >HKT48のメンバー</textarea>
+                          </div>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+                <div class="widget-footer">
+{#                   <button class="btn btn-primary" type="submit" >Edit</button>#}
+                   <button class="btn btn-success" type="submit" onclick='location.href=("/workDetail/0")' style="margin-left: 0px">確認</button>
+                   <button class="btn" type="button" style="margin-left: 0px" onclick='location.href=("/workDetail/0")'>戻る</button>
+                    <button class="btn btn-danger" type="submit"  style="float: right" onclick='location.href=("/workDetail/0")'>削除</button>
+                </div>
+              </div>
+            </div>
+          {% endfor %}
+      </div>
+      <!-- /Main window -->
+{%endblock%}
+
+{% block jsArea%}
+    <script type="text/javascript" src="../static/assets/js/jquery.min.js"></script>
+    <script type="text/javascript" src="../static/assets/js/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="../static/assets/js/raphael-min.js"></script>
+    <script type="text/javascript" src="../static/assets/js/bootstrap.js"></script>
+    <script type="text/javascript" src='../static/assets/js/sparkline.js'></script>
+    <script type="text/javascript" src='../static/assets/js/morris.min.js'></script>
+    <script type="text/javascript" src="../static/assets/js/jquery.dataTables.min.js"></script>
+    <script type="text/javascript" src="../static/assets/js/jquery.masonry.min.js"></script>
+    <script type="text/javascript" src="../static/assets/js/jquery.imagesloaded.min.js"></script>
+    <script type="text/javascript" src="../static/assets/js/jquery.facybox.js"></script>
+    <script type="text/javascript" src="../static/assets/js/jquery.alertify.min.js"></script>
+    <script type="text/javascript" src="../static/assets/js/jquery.knob.js"></script>
+    <script type='text/javascript' src='../static/assets/js/fullcalendar.min.js'></script>
+    <script type='text/javascript' src='../static/assets/js/jquery.gritter.min.js'></script>
+    <script type="text/javascript" src="../static/assets/js/realm.js"></script>
+
+    <script type="text/javascript" src="../static/assets/js/select2.min.js"></script>
+    <script type="text/javascript" src="../static/assets/js/bootstrap-colorpicker.js"></script>
+    <script type="text/javascript" src="../static/assets/js/bootstrap-datepicker.js"></script>
+    <script type="text/javascript" src="../static/assets/js/bootstrap-timepicker.js"></script>
+    <script src="../static/layui/layui.js" charset="utf-8"></script>
+    <script src="../static/js/imageValidation.js" charset="utf-8"></script>
+{%endblock%}

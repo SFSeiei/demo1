@@ -1,0 +1,99 @@
+.odd {
+    background-color: #f9f9f9 !important;
+    /*background-color:#0e90d2 !important;*/
+}
+
+.even {
+    background-color: #ffffff !important;
+    /*background-color: #1c7430 !important;*/
+}
+
+.table_tr_th001 {
+    width: 100px;
+}
+
+.undisplay {
+    display: none;
+}
+
+#cover {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    display: none;
+    z-index: 1000;
+}
+
+.row-fluid_2 {
+    margin-bottom: 10px !important;
+}
+
+.seriesIDDiv {
+    position: relative;
+    height: 60px;
+    margin: 0 0 10px 0;
+}
+
+.titleDiv {
+    margin: 6px 0 0 0;
+}
+
+.titleTextSize {
+    font-size: 20px;
+    padding: 0 10px 0 0;
+    text-align: right;
+}
+
+.titleTextPosition {
+    position: relative;
+    right: -50px;
+}
+
+.titleInputSize {
+    width: 295px;
+    margin: 6px 0 6px 0;
+    /*padding: 2px 0 2px 0;*/
+}
+
+.titleInputSize2 {
+    width: 295px;
+    height: 100px !important;
+    margin: 6px 0 6px 0;
+}
+
+.tableTdSize {
+    width: 100px;
+}
+
+.titleTable {
+    position: relative;
+
+}
+
+.tableCheckBox {
+    margin-top: 0 !important;
+}
+
+.viewSelectSize {
+    width: 390px;
+    margin: 5px 0 5px 0;
+}
+
+.btnPaddingRight {
+    margin: 3px 4px 0 0;
+}
+
+.picturePosition {
+    vertical-align: center;
+    width: 100%;
+    margin: auto;
+
+}
+#wrap2Body{
+    background-image: url("../images/ceshitu.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
